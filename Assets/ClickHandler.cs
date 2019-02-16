@@ -31,6 +31,7 @@ public class ClickHandler : MonoBehaviour
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
         if (stateInfo.IsName("Pop") && stateInfo.normalizedTime >= 0.9f)
         {
+            FindObjectOfType<AudioManager>().Play("BalloonPop");
             Destroy(gameObject);
         }
     }
