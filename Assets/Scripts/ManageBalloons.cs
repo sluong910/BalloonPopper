@@ -6,6 +6,7 @@ public class ManageBalloons : MonoBehaviour
 {
     public GameObject blueBalloon;
     public GameObject greenBalloon;
+    public static bool GameFinished = false;
     private int endingGame = 0;
 
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class ManageBalloons : MonoBehaviour
         if (endingGame > 150)
         {
             // End of game : trigger police scene
+            GameFinished = true;
             return;
         }
         if (Random.Range(0, 100.0f) <= 6f)
