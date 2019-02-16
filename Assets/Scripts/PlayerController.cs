@@ -30,9 +30,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             myRigidBody.velocity = new Vector2(speed, myRigidBody.velocity.y);
+            myAnimator.SetFloat("Speed", 2);
         } else
         {
             myRigidBody.velocity = new Vector2(0, myRigidBody.velocity.y);
+            myAnimator.SetFloat("Speed", 0);
         }
 
 

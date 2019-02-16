@@ -16,7 +16,7 @@ TagManager:
   - Ground
   - Player
   - Enemy
-  - 
+  - Collectible
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 870983175
+    locked: 0
+  - name: Foreground
+    uniqueID: 2489669301
     locked: 0

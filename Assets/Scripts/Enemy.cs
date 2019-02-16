@@ -11,17 +11,20 @@ public class Enemy : MonoBehaviour
     public bool touchingPlayer;
     public LayerMask Player;
 
-    private CircleCollider2D myCollider;
+    private BoxCollider2D myCollider;
     public GameObject thePlayer;
     public PlayerController theController;
+
+    private Animator myAnimator;
 
 
     private void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<CircleCollider2D>();
+        myCollider = GetComponent<BoxCollider2D>();
         thePlayer = GameObject.Find("character");
         theController = FindObjectOfType<PlayerController>();
+        myAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,8 +33,8 @@ public class Enemy : MonoBehaviour
         touchingPlayer = Physics2D.IsTouchingLayers(myCollider, Player);
         if (touchingPlayer)
         {
-            Destroy(thePlayer);
-            Destroy(theController);
+            //Destroy(thePlayer);
+            //Destroy(theController);
         }
     }
 }
