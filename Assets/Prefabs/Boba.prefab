@@ -145,3 +145,5 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 512
+  thePlayer: {fileID: 0}
+  theController: {fileID: 0}

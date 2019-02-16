@@ -27,8 +27,9 @@ private Rigidbody2D myRigidBody;
         touchingPlayer = Physics2D.IsTouchingLayers(myCollider, Player);
         if (touchingPlayer)
         {
-            transform.position = new Vector3(transform.position.x + 3, thePlayer.transform.position.y, thePlayer.transform.position.z);
-            thePlayer.transform.position = transform.position;
+            //transform.position = new Vector3(transform.position.x + 2, thePlayer.transform.position.y, thePlayer.transform.position.z);
+            //thePlayer.transform.position = transform.position;
+            Score.CurrentScore++;
             gameObject.SetActive(false);
         }
     }
