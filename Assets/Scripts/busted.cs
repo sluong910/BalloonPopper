@@ -8,13 +8,12 @@ public class busted : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(playSoundAfterDelay());
+        StartCoroutine(playSoundAfterDelay());        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     IEnumerator playSoundAfterDelay()

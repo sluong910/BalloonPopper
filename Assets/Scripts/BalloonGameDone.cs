@@ -7,6 +7,7 @@ public class BalloonGameDone : MonoBehaviour
 {    
     public GameObject Canvas;
     public GameObject ZotAlert;
+    private GameObject zotObj;
     private int delay = 300;
     private bool alerted = false;
 
@@ -30,10 +31,17 @@ public class BalloonGameDone : MonoBehaviour
                     FindObjectOfType<AudioManager>().Play("Siren");
                 }
                 // Instantiate a click to continue
-                Instantiate(Canvas, new Vector2(0, 0), Quaternion.identity);
+                zotObj = Instantiate(Canvas, new Vector2(0, 0), Quaternion.identity);
             }
             if (Input.GetMouseButtonDown(0) && delay <= 0)
+            {
+                ManageBalloons.GameFinished = false;
+                ManageBalloons.endingGame = 0;
+                alerted = false;
+                delay = 300;
+                Destroy(zotObj);
                 SceneManager.LoadScene("police_chase_instruction");
+            }
             else
                 delay--;
         }

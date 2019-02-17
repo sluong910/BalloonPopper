@@ -7,7 +7,7 @@ public class ManageBalloons : MonoBehaviour
     public GameObject blueBalloon;
     public GameObject greenBalloon;
     public static bool GameFinished = false;
-    private int endingGame = 0;
+    public static int endingGame = 0;
 
     // Start is called before the first frame update
     void Start()
