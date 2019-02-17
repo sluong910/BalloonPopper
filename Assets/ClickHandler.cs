@@ -32,6 +32,7 @@ public class ClickHandler : MonoBehaviour
         if (stateInfo.IsName("Pop") && stateInfo.normalizedTime >= 0.9f)
         {
             Destroy(gameObject);
+            Score.CurrentScore++;
         }
     }
 }
