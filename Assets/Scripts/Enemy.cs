@@ -11,20 +11,23 @@ public class Enemy : MonoBehaviour
     public bool touchingPlayer;
     public LayerMask Player;
 
-    private BoxCollider2D myCollider;
+    private CircleCollider2D myCollider;
     public GameObject thePlayer;
     public PlayerController theController;
 
     private Animator myAnimator;
 
+    AudioSource m_MyAudioSource;
+
 
     private void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<BoxCollider2D>();
+        myCollider = GetComponent<CircleCollider2D>();
         thePlayer = GameObject.Find("character");
         theController = FindObjectOfType<PlayerController>();
         myAnimator = GetComponent<Animator>();
+        m_MyAudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -35,6 +38,8 @@ public class Enemy : MonoBehaviour
         {
             //Destroy(thePlayer);
             //Destroy(theController);
+            m_MyAudioSource.Stop();
+            Time.timeScale = 0;
         }
     }
 }

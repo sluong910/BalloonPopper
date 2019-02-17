@@ -12,14 +12,14 @@ public class PlayerController : MonoBehaviour
     public bool grounded;
     public LayerMask whatIsGround;
 
-    private Collider2D myCollider;
+    private CircleCollider2D myCollider;
 
     private Animator myAnimator;
 
     private void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        myCollider = GetComponent<Collider2D>();
+        myCollider = GetComponent<CircleCollider2D>();
         myAnimator = GetComponent<Animator>();
     }
 
