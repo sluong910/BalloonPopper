@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -52,10 +53,12 @@ public class Enemy : MonoBehaviour
             //m_MyAudioSource.Stop();
             Time.timeScale = 0;
             source.Stop();
+            SceneManager.LoadScene("EndScene");
         } else if (thePlayer.transform.position.x < transform.position.x - 3)
         {
             //m_MyAudioSource.Stop();
             Time.timeScale = 0;
+            SceneManager.LoadScene("EndScene");
         }
     }
 }

@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a61a67e9ba8304482da221cea97558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thePlayer: {fileID: 0}
+  thePlayer: {fileID: 2115039504}
 --- !u!1 &871545578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,7 +1524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5a2121f04bbf14e8ccae8a827e3acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6.5
+  speed: 5
   touchingPlayer: 0
   Player:
     serializedVersion: 2
@@ -1534,7 +1534,6 @@ MonoBehaviour:
   source: {fileID: 0}
   clip1: {fileID: 0}
   clip2: {fileID: 0}
-  clip3: {fileID: 0}
 --- !u!50 &1786632473
 Rigidbody2D:
   serializedVersion: 4
@@ -1647,7 +1646,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786632471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.53, y: -8.55, z: 4.515625}
+  m_LocalPosition: {x: -44.42, y: -8.55, z: 3.9}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 1068380230}
@@ -2208,8 +2207,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 190234595
-  m_SortingLayer: 0
+  m_SortingLayerID: 870983175
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300028, guid: 36fe4cc62576e5f41b4c2aad8c4ed9a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2230,8 +2229,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115039498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.3, y: -10.47, z: 4.515625}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 1}
+  m_LocalPosition: {x: -34.82, y: -10.56, z: 3.9}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1068380230}
   m_RootOrder: 0
@@ -2285,12 +2284,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c476ad81d8fab4393ea0a1f02eae06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7.5
+  speed: 7
   jumpForce: 10
   grounded: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  Boba:
+    serializedVersion: 2
+    m_Bits: 2048
+  touchingBoba: 1
   target: {fileID: 0}
   smoothTime: 0.3
 --- !u!1 &2118906972
