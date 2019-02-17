@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManageBalloons : MonoBehaviour
 {
     public GameObject blueBalloon;
+    private int endingGame = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +20,18 @@ public class ManageBalloons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (endingGame > 150)
+        {
+            // End of game : trigger police scene
+            return;
+        }
         if (Random.Range(0, 100.0f) <= 6f)
         {
+            SpawnBalloon();
+        }
+        else if (Score.CurrentScore > 30)
+        {
+            endingGame++;
             SpawnBalloon();
         }
     }
