@@ -17,7 +17,11 @@ public class Enemy : MonoBehaviour
 
     private Animator myAnimator;
 
-    AudioSource m_MyAudioSource;
+    //AudioSource m_MyAudioSource;
+
+    public AudioSource source;
+    public AudioClip clip1;
+    public AudioClip clip2;
 
 
     private void Start()
@@ -27,7 +31,13 @@ public class Enemy : MonoBehaviour
         thePlayer = GameObject.Find("character");
         theController = FindObjectOfType<PlayerController>();
         myAnimator = GetComponent<Animator>();
-        m_MyAudioSource = GetComponent<AudioSource>();
+        //m_MyAudioSource = GetComponent<AudioSource>();
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        source = audioSources[0];
+        clip1 = audioSources[0].clip;
+        clip2 = audioSources[1].clip;
+        source.PlayOneShot(clip1);
+        source.PlayOneShot(clip2);
     }
 
     void Update()
@@ -38,7 +48,12 @@ public class Enemy : MonoBehaviour
         {
             //Destroy(thePlayer);
             //Destroy(theController);
-            m_MyAudioSource.Stop();
+            //m_MyAudioSource.Stop();
+            Time.timeScale = 0;
+            source.Stop();
+        } else if (thePlayer.transform.position.x < transform.position.x - 3)
+        {
+            //m_MyAudioSource.Stop();
             Time.timeScale = 0;
         }
     }
