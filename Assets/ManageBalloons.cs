@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManageBalloons : MonoBehaviour
 {
     public GameObject blueBalloon;
+    public GameObject greenBalloon;
     private int endingGame = 0;
 
     // Start is called before the first frame update
@@ -46,7 +47,16 @@ public class ManageBalloons : MonoBehaviour
         // Only spawn if balloon does not overlap with another balloon
         if (IsSpawnValid(spawnPos))
         {
-            Instantiate(blueBalloon, spawnPos, Quaternion.identity);
+            GameObject balloon;
+            if (Random.Range(0, 1.0f) < 0.5)
+            {
+                balloon = blueBalloon;
+            }
+            else
+            {
+                balloon = greenBalloon;
+            }
+            Instantiate(balloon, spawnPos, Quaternion.identity);
         }
     }
 
