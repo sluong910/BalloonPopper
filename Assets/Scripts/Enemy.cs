@@ -51,13 +51,11 @@ public class Enemy : MonoBehaviour
             //Destroy(thePlayer);
             //Destroy(theController);
             //m_MyAudioSource.Stop();
-            Time.timeScale = 0;
             source.Stop();
             SceneManager.LoadScene("EndScene");
         } else if (thePlayer.transform.position.x < transform.position.x - 3)
         {
             //m_MyAudioSource.Stop();
-            Time.timeScale = 0;
             SceneManager.LoadScene("EndScene");
         }
     }
