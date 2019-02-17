@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00dd59b55a2a99646a761c3284eda04e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Canvas: {fileID: 7548868451441465189, guid: 4e83bc8e942ac654ab48f32be62a007d, type: 3}
+  Canvas: {fileID: 6061551398347454995, guid: 899682b9909b1ae469e2de60e7cb4e5e, type: 3}
   ZotAlert: {fileID: 6062997944944709041, guid: 376d443912f6eea4f9b63bc2f95c8b1c,
     type: 3}
 --- !u!1 &1809775873
