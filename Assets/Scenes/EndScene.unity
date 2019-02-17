@@ -142,7 +142,7 @@ RectTransform:
   m_GameObject: {fileID: 119950367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1979818545}
   m_RootOrder: 1
@@ -851,6 +851,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1518270033036214259, guid: 020c46ff7b67c7a4abc9d8e25c26586e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518270033036214259, guid: 020c46ff7b67c7a4abc9d8e25c26586e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1518270033036214258, guid: 020c46ff7b67c7a4abc9d8e25c26586e,
         type: 3}
       propertyPath: m_ApplyRootMotion

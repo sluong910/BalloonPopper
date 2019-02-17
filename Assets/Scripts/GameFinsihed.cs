@@ -28,14 +28,14 @@ public class GameFinsihed : MonoBehaviour
                 go.AddComponent<RectTransform>();
                 go.transform.SetParent(this.transform);                
                 go.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 100);
-                go.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 500);
-                go.transform.localPosition = new Vector3(0, -250f, 0);                
+                go.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1000);
+                go.transform.localPosition = new Vector3(0, -380f, 0);                
 
                 go.AddComponent<Text>().text = "TAP TO RETURN TO IRVINE";
                 go.GetComponent<Text>().font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
                 go.GetComponent<Text>().fontStyle = FontStyle.Bold;
                 go.GetComponent<Text>().color = Color.white;
-                go.GetComponent<Text>().fontSize = 35;
+                go.GetComponent<Text>().fontSize = 70;
 
                 setText = true;
             }            

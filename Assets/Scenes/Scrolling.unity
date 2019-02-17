@@ -1155,7 +1155,7 @@ PrefabInstance:
     - target: {fileID: 497997933717758532, guid: 311327a74502c6c4497ed38b94df975e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0974593
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 497997933717758532, guid: 311327a74502c6c4497ed38b94df975e,
         type: 3}
@@ -1210,7 +1210,7 @@ PrefabInstance:
     - target: {fileID: 497997933717758532, guid: 311327a74502c6c4497ed38b94df975e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 497997933717758532, guid: 311327a74502c6c4497ed38b94df975e,
         type: 3}
@@ -1360,7 +1360,7 @@ PrefabInstance:
     - target: {fileID: 497997933717758532, guid: 311327a74502c6c4497ed38b94df975e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 497997933717758532, guid: 311327a74502c6c4497ed38b94df975e,
         type: 3}
@@ -1765,7 +1765,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 38.84, y: 21.110003}
+    oldSize: {x: 38.839996, y: 21.12}
     newSize: {x: 38.84, y: 21.110003}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2040,7 +2040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887100609}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.33, y: 0.9036148, z: 3.8427951}
+  m_LocalPosition: {x: 18, y: 0.9036148, z: 3.8427951}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1176861990}
@@ -2482,7 +2482,7 @@ PrefabInstance:
     - target: {fileID: 5758574434203071653, guid: fa29f3f76d90eb745a9156302a59e522,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5758574434203071653, guid: fa29f3f76d90eb745a9156302a59e522,
         type: 3}
