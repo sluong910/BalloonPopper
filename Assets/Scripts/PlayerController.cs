@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
 
     private Animator myAnimator;
 
+    public Transform target;
+    public float smoothTime = 0.3F;
+    private Vector2 velocity = Vector2.zero;
+
     private void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
@@ -27,25 +31,28 @@ public class PlayerController : MonoBehaviour
     {
         grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetMouseButtonDown(0))
         {
             myRigidBody.velocity = new Vector2(speed, myRigidBody.velocity.y);
             myAnimator.SetFloat("Speed", 2);
         } else
         {
-            myRigidBody.velocity = new Vector2(0, myRigidBody.velocity.y);
+            //myRigidBody.velocity = new Vector2(0, myRigidBody.velocity.y);
+            Vector2 targetPosition = target.TransformPoint(new Vector2(0, transform.position.y));
+            transform.position = Vector2.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+            myRigidBody.transform.position = transform.position;
             myAnimator.SetFloat("Speed", 0);
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            if (grounded)
-            {
-                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        //{
+            //if (grounded)
+            //{
+            //    myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
+            //}
+        //}
 
-        myAnimator.SetBool("Grounded", grounded);
+        //myAnimator.SetBool("Grounded", grounded);
     }
 }
