@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
 
     private Animator myAnimator;
 
+    AudioSource m_MyAudioSource;
+
 
     private void Start()
     {
@@ -25,6 +27,7 @@ public class Enemy : MonoBehaviour
         thePlayer = GameObject.Find("character");
         theController = FindObjectOfType<PlayerController>();
         myAnimator = GetComponent<Animator>();
+        m_MyAudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -35,6 +38,7 @@ public class Enemy : MonoBehaviour
         {
             //Destroy(thePlayer);
             //Destroy(theController);
+            m_MyAudioSource.Stop();
             Time.timeScale = 0;
         }
     }
