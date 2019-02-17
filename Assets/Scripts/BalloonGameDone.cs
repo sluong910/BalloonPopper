@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BalloonGameDone : MonoBehaviour
 {
@@ -37,8 +38,7 @@ public class BalloonGameDone : MonoBehaviour
             else
             {
                 if (Input.GetMouseButtonDown(0))
-                    // Load next scene
-                    return;
+                    SceneManager.LoadScene("police_chase_instruction");
             }
         }
     }
