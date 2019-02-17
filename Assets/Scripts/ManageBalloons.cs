@@ -22,11 +22,14 @@ public class ManageBalloons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (endingGame > 150)
+        if (endingGame > 250)
+        {
+            return;
+        }
+        if (endingGame > 100)
         {
             // End of game : trigger police scene
-            GameFinished = true;
-            return;
+            GameFinished = true;            
         }
         if (Random.Range(0, 100.0f) <= 6f)
         {

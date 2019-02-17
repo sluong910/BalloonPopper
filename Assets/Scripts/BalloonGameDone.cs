@@ -7,7 +7,7 @@ public class BalloonGameDone : MonoBehaviour
 {    
     public GameObject Canvas;
     public GameObject ZotAlert;
-    private int delay = 75;
+    private int delay = 300;
     private bool alerted = false;
 
     // Start is called before the first frame update
@@ -19,10 +19,8 @@ public class BalloonGameDone : MonoBehaviour
     void Update()
     {
         if (ManageBalloons.GameFinished)
-        {
-            if (delay > 0)
-                delay--;
-            else if (delay <= 0 && !alerted)
+        {         
+            if (!alerted)
             {
                 alerted = true;
                 Vector2 center = new Vector2(-0.3f, -1.84f);
@@ -34,11 +32,10 @@ public class BalloonGameDone : MonoBehaviour
                 // Instantiate a click to continue
                 Instantiate(Canvas, new Vector2(0, 0), Quaternion.identity);
             }
+            if (Input.GetMouseButtonDown(0) && delay <= 0)
+                SceneManager.LoadScene("police_chase_instruction");
             else
-            {
-                if (Input.GetMouseButtonDown(0))
-                    SceneManager.LoadScene("police_chase_instruction");
-            }
+                delay--;
         }
     }
 
