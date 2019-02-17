@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        speed = 6 + 0.1f + (Score.CurrentScore / 500.0f);
         myRigidBody.velocity = new Vector2(speed, myRigidBody.velocity.y);
         touchingPlayer = Physics2D.IsTouchingLayers(myCollider, Player);
         if (touchingPlayer)

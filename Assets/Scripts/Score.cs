@@ -15,6 +15,7 @@ public class Score : MonoBehaviour
     public void OnGUI()
     {
         GUI.skin.label.fontSize = 24;
+        GUI.contentColor = Color.black;
         GUI.Label(new Rect(20, 20, 150, 50), "Score: " + CurrentScore);
     }
 }

@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
 
     public bool grounded;
     public LayerMask whatIsGround;
+    public LayerMask Boba;
+
+    public bool touchingBoba;
 
     private CircleCollider2D myCollider;
 
@@ -43,14 +46,25 @@ public class PlayerController : MonoBehaviour
             myRigidBody.transform.position = transform.position;
             myAnimator.SetFloat("Speed", 0);
         }
-
+        touchingBoba = Physics2D.IsTouchingLayers(myCollider, Boba);
+        //if (touchingBoba)
+        //{
+            //if (myAnimator.GetBool("Power") == true)
+            //{
+           //     myAnimator.SetBool("Power", false);
+            //}
+          //  else
+           // {
+              //  myAnimator.SetBool("Power", true);
+           // }
+       // }
 
         //if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         //{
-            //if (grounded)
-            //{
-            //    myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
-            //}
+        //if (grounded)
+        //{
+        //    myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
+        //}
         //}
 
         //myAnimator.SetBool("Grounded", grounded);

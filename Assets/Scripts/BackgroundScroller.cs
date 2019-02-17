@@ -14,7 +14,7 @@ public class BackgroundScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        backgroundWidth = 10;
+        backgroundWidth = 19;
     }
 
     // Update is called once per frame
