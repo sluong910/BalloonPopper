@@ -304,8 +304,8 @@ MonoBehaviour:
     volume: 0.455
     pitch: 1.06
     source: {fileID: 0}
-  - name: Alert
-    clip: {fileID: 8300000, guid: 7c0da151a0c178f49b0d5e5d10ea21fc, type: 3}
+  - name: bgm
+    clip: {fileID: 8300000, guid: d8c42ac75e54f0d4ea86ccf7bf1bbd11, type: 3}
     volume: 1
     pitch: 1.06
     source: {fileID: 0}
@@ -334,6 +334,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6306802136525211487}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1782747748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782747747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7f5e40853ef564e911168ba6e7e4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 1385306268}
 --- !u!114 &1782747750
 MonoBehaviour:
   m_ObjectHideFlags: 0

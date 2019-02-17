@@ -284,8 +284,13 @@ MonoBehaviour:
   sounds:
   - name: BalloonPop
     clip: {fileID: 8300000, guid: f79da200ae03842d3b8849a758593f2e, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: bgm
+    clip: {fileID: 8300000, guid: f58ed02a46c099f419eef418e7734d06, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &1071160082
 Transform:
@@ -474,6 +479,7 @@ GameObject:
   - component: {fileID: 1209945077}
   - component: {fileID: 1209945076}
   - component: {fileID: 1209945075}
+  - component: {fileID: 1209945079}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -566,6 +572,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1209945079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209945074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7f5e40853ef564e911168ba6e7e4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 1071160081}
 --- !u!1 &1214627669
 GameObject:
   m_ObjectHideFlags: 0

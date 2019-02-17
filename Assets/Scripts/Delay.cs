@@ -21,7 +21,7 @@ public class Delay : MonoBehaviour
     IEnumerator StartDelay()
     {
         Time.timeScale = 0;
-        float pauseTime = Time.realtimeSinceStartup + 3f;
+        float pauseTime = Time.realtimeSinceStartup + 3.1f;
         while (Time.realtimeSinceStartup < pauseTime){
             yield return 0;
         }

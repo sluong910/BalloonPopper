@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class BalloonGameDone : MonoBehaviour
-{
+{    
     public GameObject Canvas;
     public GameObject ZotAlert;
     private int delay = 75;
@@ -13,7 +13,6 @@ public class BalloonGameDone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

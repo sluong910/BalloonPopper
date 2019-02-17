@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour
         } else
         {
             //myRigidBody.velocity = new Vector2(0, myRigidBody.velocity.y);
-            Vector2 targetPosition = target.TransformPoint(new Vector2(0, transform.position.y));
-            transform.position = Vector2.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+            //Vector2 targetPosition = target.TransformPoint(new Vector2(0, transform.position.y));
+            //transform.position = Vector2.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime, Mathf.Infinity, Time.deltaTime);
             myRigidBody.transform.position = transform.position;
             myAnimator.SetFloat("Speed", 0);
         }
