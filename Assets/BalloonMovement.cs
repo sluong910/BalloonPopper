@@ -9,6 +9,14 @@ public class BalloonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Move the balloons up
+        if (gameObject.transform.position.y > 6)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            // Move the balloons up
+            transform.Translate(Vector3.up * Speed);
+        }        
     }
 }

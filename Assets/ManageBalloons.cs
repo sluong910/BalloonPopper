@@ -19,7 +19,10 @@ public class ManageBalloons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Random.Range(0, 100.0f) <= 6f)
+        {
+            SpawnBalloon();
+        }
     }
 
     private void SpawnBalloon()
