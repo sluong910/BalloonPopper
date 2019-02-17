@@ -586,10 +586,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: a7a0140e-089e-468b-98f1-37e9b5915e49
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: BalloonPopper
+  organizationId: luongngan2110
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
