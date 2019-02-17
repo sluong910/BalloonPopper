@@ -24,7 +24,8 @@ public class ClickHandler : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
             if (hit && hit.collider.gameObject == gameObject) {
                 anim.SetTrigger("Clicked");
-            }          
+                FindObjectOfType<AudioManager>().Play("BalloonPop");
+            }
         }
 
         // Destroy the balloon object when the animation is finished
@@ -32,7 +33,6 @@ public class ClickHandler : MonoBehaviour
         if (stateInfo.IsName("Pop") && stateInfo.normalizedTime >= 0.9f)
         {
             Score.CurrentScore++;
-            FindObjectOfType<AudioManager>().Play("BalloonPop");
             Destroy(gameObject);
         }
     }

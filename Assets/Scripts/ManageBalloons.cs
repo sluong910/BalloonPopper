@@ -32,7 +32,7 @@ public class ManageBalloons : MonoBehaviour
         {
             SpawnBalloon();
         }
-        else if (Score.CurrentScore > 30)
+        else if (Score.CurrentScore > 20)
         {
             endingGame++;
             SpawnBalloon();
