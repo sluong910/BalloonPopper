@@ -8,8 +8,9 @@ Secret levels included in the game! Play and see what surprises are waiting for 
 Created in Unity with C#
 
 HackUCI 2019
+
 Team Members:
-Ngan Luong
-Joseph Yeung
-Minh Hua
-Justin Lonh
+- Ngan Luong
+- Joseph Yeung
+- Minh Hua
+- Justin Lonh
